@@ -1,0 +1,33 @@
+@import 'mixins';
+#searchbar{
+    @include widthAndHeight(100%,10%);
+    @include flex(center,center);
+    #search{
+        @include widthAndHeight(40%,60%);
+        @include flex(center,center);
+        #searchForm{
+            @include widthAndHeight(75%,100%);
+            font-size: 3vmin;
+        }
+        #searchButton{
+            @include widthAndHeight(25%,100%);
+            font-size: 3vmin;
+        }
+    }
+}
+#searchbarFull{
+    @include widthAndHeight(100%,100%);
+    @include flex(center,center);
+    #search{
+        @include widthAndHeight(40%,6%);
+        @include flex(center,center);
+        #searchForm{
+            @include widthAndHeight(75%,100%);
+            font-size: 3vmin;
+        }
+        #searchButton{
+            @include widthAndHeight(25%,100%);
+            font-size: 3vmin;
+        }
+    }
+}

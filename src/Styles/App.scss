@@ -1,0 +1,22 @@
+@import 'mixins';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    .app{
+        background: radial-gradient(circle, rgb(197, 238, 255) 0%, rgba(68,154,255,1) 100%);
+        @include widthAndHeight(100%,100vh);
+        #mainMulti{
+            @include widthAndHeight(100%,90%);
+            @include grid(100%,90% 10%);
+            padding: 0 2% 0 2%;
+        }
+        #mainSingle{
+            @include widthAndHeight(100%,90%);
+            @include flex(center,center);
+            padding: 0 2% 2% 2%;
+        }
+    }
+}
+@import 'media-queries';

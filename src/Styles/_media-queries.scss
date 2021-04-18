@@ -1,0 +1,311 @@
+@import 'mixins';
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    *{
+        .app{
+            #searchbar{
+                #search{
+                    @include widthAndHeight(80%,60%);
+                    #searchForm{
+                        font-size: 4vmin;
+                    }
+                    #searchButton{
+                        font-size: 4vmin;
+                    }
+                }
+            }
+            #searchbarFull{
+                #search{
+                    @include widthAndHeight(80%,8%);
+                    font-size: 4vmin;
+                    #searchForm{
+                        font-size: 4vmin;
+                    }
+                    #searchButton{
+                        font-size: 4vmin;
+                    }
+                }
+            }
+            #mainMulti{
+                #displayMulti{
+                    grid-template-columns: repeat(2,50%);
+                    .card{
+                        .cardTitle{
+                            font-size: 3vmin;
+                        }
+                    }
+                }
+                #navbar{ 
+                    @include widthAndHeight(100%,100%);
+                }
+            }
+            #mainSingle{
+                #displaySingle{
+                    @include widthAndHeight(100%,100%);
+                    #person{
+                        #gender{
+                            @include flex(center,flex-start);
+                            grid-area: 12 / 1 / span 1 / span 10;
+                        }
+                        #knownForContainer{
+                            grid-area: 13 / 1 / span 7 / span 20;
+                            @include grid(100%,20% 80%);
+                            #knownForTitle{
+                                @include flex(center,center);
+                                font-size: 4vmin;
+                            }
+                        }
+                        #department{
+                            @include flex(center,flex-start);
+                            grid-area: 12 / 10 / span 1 / span 10;
+                        }
+                    }
+                    #title{
+                        #description{
+                            @include flex(center,center);
+                            grid-area: 14 / 1 / span 6 / span 20;
+                            font-size: 2.5vmin;
+                        }
+                        #release-date{
+                            @include flex(center,center);
+                            grid-area: 13 / 1 / span 1 / span 10;
+                            font-size: 3vmin;
+                        }
+                        #score{
+                            @include flex(center,center);
+                            grid-area: 13 / 11 / span 1 / span 10;
+                            font-size: 3vmin;
+                        }
+                        #genres{
+                            @include flex(center,center);
+                            grid-area: 12 / 1 / span 1 / span 20;
+                            font-size: 3vmin;
+                        }
+                    }
+                    #name{
+                        font-size: 4vmin;
+                        grid-area: 1 / 1 / span 2 / span 20;
+                    }
+                    #goBack{
+                        @include widthAndHeight(100%,100%);
+                        grid-area: 20 / 8 / span 1 / span 6;
+                    }
+                    #image{
+                        grid-area: 3 / 1 / span 8 / span 20;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    *{
+        .app{
+            #searchbar{
+                #search{
+                    @include widthAndHeight(75%,60%);
+                    #searchForm{
+                        font-size: 4vmin;
+                    }
+                    #searchButton{
+                        font-size: 4vmin;
+                    }
+                }
+            }
+            #searchbarFull{
+                #search{
+                    @include widthAndHeight(60%,8%);
+                    #searchForm{
+                        font-size: 3vmin;
+                    }
+                    #searchButton{
+                        font-size: 3vmin;
+                    }
+                }
+            }
+            #mainMulti{
+                #displayMulti{
+                    grid-template-columns: repeat(3,50%);
+                    .card{
+                        .cardTitle{
+                            font-size: 2vmin;
+                        }
+                    }
+                }
+                #navbar{ 
+                    @include widthAndHeight(100%,100%);
+                }
+            }
+            #mainSingle{
+                #displaySingle{
+                    @include widthAndHeight(100%,100%);
+                    #person{
+                        #gender{
+                            @include flex(center,flex-start);
+                            grid-area: 12 / 1 / span 1 / span 10;
+                            font-size: 2.5vmin;
+                        }
+                        #knownForContainer{
+                            grid-area: 13 / 1 / span 7 / span 20;
+                            @include grid(100%,20% 80%);
+                            #knownForTitle{
+                                @include flex(center,center);
+                                font-size: 3vmin;
+                            }
+                            #knownFor{
+                                @include grid(repeat(3,33.33%),100%);
+                                .card{
+                                    .cardTitle{
+                                        font-size: 1.7vmin;
+                                    }
+                                }
+                            }
+                        }
+                        #department{
+                            @include flex(center,flex-start);
+                            grid-area: 12 / 10 / span 1 / span 10;
+                            font-size: 2.5vmin;
+                        }
+                    }
+                    #title{
+                        #description{
+                            @include flex(center,center);
+                            grid-area: 14 / 1 / span 6 / span 20;
+                            font-size: 2vmin;
+                        }
+                        #release-date{
+                            @include flex(center,center);
+                            grid-area: 13 / 1 / span 1 / span 10;
+                            font-size: 2.5vmin;
+                        }
+                        #score{
+                            @include flex(center,center);
+                            grid-area: 13 / 11 / span 1 / span 10;
+                            font-size: 2.5vmin;
+                        }
+                        #genres{
+                            @include flex(center,center);
+                            grid-area: 12 / 1 / span 1 / span 20;
+                            font-size: 2.5vmin;
+                        }
+                    }
+                    #name{
+                        font-size: 4vmin;
+                        grid-area: 1 / 1 / span 2 / span 20;
+                    }
+                    #goBack{
+                        @include widthAndHeight(100%,100%);
+                        grid-area: 20 / 8 / span 1 / span 6;
+                    }
+                    #image{
+                        grid-area: 3 / 1 / span 8 / span 20;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    *{
+        .app{
+            #searchbar{
+                #search{
+                    @include widthAndHeight(60%,60%);
+                    #searchForm{
+                        font-size: 3.5vmin;
+                    }
+                    #searchButton{
+                        font-size: 3.5vmin;
+                    }
+                }
+            }
+            #searchbarFull{
+                #search{
+                    @include widthAndHeight(60%,8%);
+                    #searchForm{
+                        font-size: 3.5vmin;
+                    }
+                    #searchButton{
+                        font-size: 3.5vmin;
+                    }
+                }
+            }
+            #mainMulti{
+                #displayMulti{
+                    grid-template-columns: repeat(3,33.33%);
+                    .card{
+                        .cardTitle{
+                            font-size: 2vmin;
+                        }
+                    }
+                }
+                #navbar{ 
+                    @include widthAndHeight(70%,100%);
+                }
+            }
+            #mainSingle{
+                #displaySingle{
+                    @include widthAndHeight(100%,100%);
+                    #person{
+                        #gender{
+                            @include flex(center,flex-start);
+                            grid-area: 12 / 1 / span 1 / span 10;
+                            font-size: 2.5vmin;
+                        }
+                        #knownForContainer{
+                            grid-area: 13 / 1 / span 7 / span 20;
+                            @include grid(100%,20% 80%);
+                            #knownForTitle{
+                                @include flex(center,center);
+                                font-size: 3vmin;
+                            }
+                        }
+                        #department{
+                            @include flex(center,flex-start);
+                            grid-area: 12 / 10 / span 1 / span 10;
+                            font-size: 2.5vmin;
+                        }
+                    }
+                    #title{
+                        #description{
+                            @include flex(center,center);
+                            grid-area: 14 / 1 / span 6 / span 20;
+                            font-size: 2vmin;
+                        }
+                        #release-date{
+                            @include flex(center,center);
+                            grid-area: 13 / 1 / span 1 / span 10;
+                            font-size: 2.5vmin;
+                        }
+                        #score{
+                            @include flex(center,center);
+                            grid-area: 13 / 11 / span 1 / span 10;
+                            font-size: 2.5vmin;
+                        }
+                        #genres{
+                            @include flex(center,center);
+                            grid-area: 12 / 1 / span 1 / span 20;
+                            font-size: 2.5vmin;
+                        }
+                    }
+                    #name{
+                        font-size: 4vmin;
+                        grid-area: 1 / 1 / span 2 / span 20;
+                    }
+                    #goBack{
+                        @include widthAndHeight(100%,100%);
+                        grid-area: 20 / 9 / span 1 / span 4;
+                    }
+                    #image{
+                        grid-area: 3 / 1 / span 8 / span 20;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+
+}
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
+
+}

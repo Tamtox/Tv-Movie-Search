@@ -1,0 +1,84 @@
+@import 'mixins';
+#displaySingle{
+    @include widthAndHeight(80%,100%);
+    #person{
+        @include widthAndHeight(100%,100%);
+        @include grid(repeat(20,5%), repeat(20,5%));
+        #gender{
+            grid-area: 5 / 6 / span 1 / span 16;
+            padding-left: 2% ;
+            font-size: 2.5vmin;
+        }
+        #knownForContainer{
+            grid-area: 8 / 7 / span 10 / span 15;
+            @include grid(100%,20% 80%);
+            #knownForTitle{
+                @include flex(center,flex-start);
+                font-size: 3vmin;
+            }
+            #knownFor{
+                @include grid(repeat(3,33.33%),100%);
+                .card{
+                    @include grid(100%, 70% 30%);
+                    .cardImage{
+                        @include widthAndHeight(100%,100%);
+                        object-fit: contain;
+                        margin: auto;
+                        filter:drop-shadow(2.5px 5px 1px rgba(0, 0, 0, 0.7));
+                    }
+                    .cardTitle{
+                        @include flex(center,center);
+                        text-align: center;
+                        font-size: 2vmin;
+                    }
+                }
+            }
+        }
+        #department{
+            grid-area: 6 / 6 / span 1 / span 16;
+            padding-left: 2% ;
+            font-size: 2.5vmin;
+        }
+
+    }
+    #title{
+        @include widthAndHeight(100%,100%);
+        @include grid(repeat(20,5%), repeat(20,5%));
+        #description{
+            @include flex(center,center);
+            grid-area: 7 / 6 / span 10 / span 15;
+            font-size: 2.5vmin;
+            padding-left: 2% ;
+        }
+        #release-date{
+            grid-area: 5 / 6 / span 1 / span 16;
+            padding-left: 2% ;
+            font-size: 2.5vmin;
+        }
+        #score{
+            grid-area: 6 / 6 / span 1 / span 16;
+            padding-left: 2% ;
+            font-size: 2.5vmin;
+        }
+        #genres{
+            grid-area: 4 / 6 / span 1 / span 16;
+            padding-left: 2% ;
+            font-size: 2.5vmin;
+        }
+    }
+    #name{
+        @include flex(center,center);
+        font-size: 4vmin;
+        grid-area: 1 / 1 / span 2 / span 20;
+    }
+    #goBack{
+        @include flex(center,center);
+        @include widthAndHeight(100%,100%);
+        grid-area: 20 / 2 / span 1 / span 3;
+    }
+    #image{
+        @include widthAndHeight(100%,100%);
+        object-fit: contain;
+        grid-area: 3 / 1 / span 15 / span 5;
+    }
+}

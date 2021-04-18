@@ -1,0 +1,29 @@
+@import 'mixins';
+#displayMulti{
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    grid-auto-rows: 50%;
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: 2%;
+    .card{
+        @include grid(100%, 80% 20%);
+        .cardImage{
+            @include widthAndHeight(100%,100%);
+            object-fit: contain;
+            margin: auto;
+            filter:drop-shadow(2.5px 5px 1px rgba(0, 0, 0, 0.7));
+            transition: 0.5s;
+            border-radius: 10px;
+        }
+        .cardImage:hover{
+            transform: scale(1.05);
+            filter:drop-shadow(5px 10px 1px rgba(0, 0, 0, 0.4));
+        }
+        .cardTitle{
+            @include flex(center,center);
+            text-align: center;
+            font-size: 2vmin;
+        }
+    }
+}
